@@ -4,7 +4,7 @@ All of the questions are from leetcode, with the guidance of [Yangshun Tay](http
 **Disclaims:**
 The purpose of this post is to keep tracking on my progress for coming up coding interviews. Thanks!
 
-1. Array [10]
+1. **Array** [10]
     + Two Sum
     + Best Time to Buy and Sell Stock
     + Contains Duplicate
@@ -16,14 +16,14 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + 3Sum
     + Container With Most Water
 
-2. Binary [5]
+2. **Binary** [5]
     + Sum of Two Integers
     + Number of 1 Bits
     + Counting Bits
     + Missing Number
     + Reverse Bits
 
-3. Dynamic Programming [11]
+3. **Dynamic Programming** [11]
     + 0/1 Knapsack
     + Climbing Stairs
     + Coin Change
@@ -36,7 +36,7 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Unique Paths
     + Jump Game
 
-4. Graphs [8]
+4. **Graphs** [8]
     + Clone Graph
     + Course Schedule
     + Alien Dictionary
@@ -46,13 +46,13 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Number of Connected Components in an Undirected Graph
     + Longest Consecutive Sequence
 
-5. Intervals [4]
+5. **Intervals** [4]
     + Insert Interval
     + Merge Intervals
     + Meeting Rooms and Meeting Rooms II
     + Non-overlapping Intervals
 
-6. Linked list [6]
+6. **Linked list** [6]
     + Reverse a Linked List
     + Detect Cycle in a Linked List
     + Merge Two Sorted Lists
@@ -60,22 +60,22 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Remove Nth Node From End Of List
     + Reorder List
 
-7. Math [3]
+7. **Math** [3]
     + Pow(x, n)
     + Sqrt(x)
     + Integer to English Words
 
-8. Matrix [4]
+8. **Matrix** [4]
     + Set Matrix Zeroes
     + Spiral Matrix
     + Rotate Image
     + Word Search
 
-9. Recursion [2]
+9. **Recursion** [2]
     + Subsets and Subsets II
     + Strobogrammatic Number II
 
-10. String [10]
+10. **String** [10]
     + Longest Substring Without Repeating Characters
     + Longest Repeating Character Replacement
     + Minimum Window Substring
@@ -87,7 +87,7 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Longest Palindromic Substring
     + Palindromic Substrings
 
-11. Tree [11]
+11. **Tree** [11]
     + Maximum Depth of Binary Tree
     + Same Tree
     + Invert or Flip Binary Tree
@@ -100,12 +100,12 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Kth Smallest Element in a BST
     + Lowest Common Ancestor of BST
 
-12. Tries [3]
+12. **Tries** [3]
     + Implement Trie (Prefix Tree)
     + Add and Search Word
     + Word Search II
 
-13. Heap [3]
+13. **Heap** [3]
     + Merge K Sorted Lists
     + Top K Frequent Elements
     + Find Median from Data Stream
