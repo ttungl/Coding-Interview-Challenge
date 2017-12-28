@@ -21,17 +21,17 @@ All of the questions are from leetcode, with the guidance of [Yangshun Tay](http
     + Reverse Bits
 
 3. Dynamic Programming [11]
-    0/1 Knapsack
-    Climbing Stairs
-    Coin Change
-    Longest Increasing Subsequence
-    Longest Common Subsequence
-    Word Break Problem
-    Combination Sum
-    House Robber and House Robber II
-    Decode Ways
-    Unique Paths
-    Jump Game
+    + 0/1 Knapsack
+    + Climbing Stairs
+    + Coin Change
+    + Longest Increasing Subsequence
+    + Longest Common Subsequence
+    + Word Break Problem
+    + Combination Sum
+    + House Robber and House Robber II
+    + Decode Ways
+    + Unique Paths
+    + Jump Game
 
 4. Graphs [8]
     + Clone Graph
