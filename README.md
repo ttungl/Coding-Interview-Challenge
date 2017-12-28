@@ -1,7 +1,7 @@
 # Coding Interview Challenge
 All of the questions are from leetcode, with the guidance of [Yangshun Tay](https://github.com/yangshun).
 
-**Disclaims**
+**Disclaims: **
 The purpose of this post is to keep tracking on my progress for coming up coding interviews. Thanks!
 
 1. Array [10]
