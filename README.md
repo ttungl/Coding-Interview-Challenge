@@ -36,12 +36,11 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Unique Paths
     + Jump Game
 
-4. **Graphs** [9]
+4. **Graphs** [8]
     + Clone Graph
     + Course Schedule
     + Alien Dictionary
     + [Pacific Atlantic Water Flow](https://github.com/ttungl/Coding-Interview-Challenge/blob/master/source-code/Pacific%20Atlantic%20Water%20Flow%20417.py) 
-    + [Longest Increasing Path in a Matrix](https://github.com/ttungl/Coding-Interview-Challenge/blob/master/source-code/Longest%20Increasing%20Path%20in%20a%20Matrix%20329.py)
     + Number of Islands
     + Graph Valid Tree
     + Number of Connected Components in an Undirected Graph
@@ -66,11 +65,12 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Sqrt(x)
     + Integer to English Words
 
-8. **Matrix** [4]
+8. **Matrix** [5]
     + Set Matrix Zeroes
     + Spiral Matrix
     + Rotate Image
     + Word Search
+    + [Longest Increasing Path in a Matrix](https://github.com/ttungl/Coding-Interview-Challenge/blob/master/source-code/Longest%20Increasing%20Path%20in%20a%20Matrix%20329.py)
 
 9. **Recursion** [2]
     + Subsets and Subsets II
