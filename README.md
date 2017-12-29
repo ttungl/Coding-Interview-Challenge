@@ -36,11 +36,12 @@ The purpose of this post is to keep tracking on my progress for coming up coding
     + Unique Paths
     + Jump Game
 
-4. **Graphs** [8]
+4. **Graphs** [9]
     + Clone Graph
     + Course Schedule
     + Alien Dictionary
     + [Pacific Atlantic Water Flow](https://github.com/ttungl/Coding-Interview-Challenge/blob/master/source-code/Pacific%20Atlantic%20Water%20Flow%20417.py) 
+    + [Longest Increasing Path in a Matrix](https://github.com/ttungl/Coding-Interview-Challenge/blob/master/source-code/Longest%20Increasing%20Path%20in%20a%20Matrix%20329.py)
     + Number of Islands
     + Graph Valid Tree
     + Number of Connected Components in an Undirected Graph
