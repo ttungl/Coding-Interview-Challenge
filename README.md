@@ -1,5 +1,5 @@
 # Coding Interview Challenge
-All of the questions are from leetcode, originally from [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
+All of the questions are from leetcode, credit to [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
 
 ---
 
