@@ -15,9 +15,12 @@ class Solution(object):
         
         m = len(matrix) # rows
         n = len(matrix[0]) # cols
+
         directions = [(1,0),(-1,0),(0,1),(0,-1)]
+
         p_visited = [[False for _ in range(n)] for _ in range(m)]
         a_visited = [[False for _ in range(n)] for _ in range(m)]
+        
         res = []
         
         # explore neighbors of a node/point
