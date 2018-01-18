@@ -1,6 +1,10 @@
 # Coding Interview Challenge
-All of the questions are from leetcode, originally from [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook).
+All of the questions are from leetcode, originally from [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
 
+### Updates
+01-18-2018: Loaded all files, continue to update every week. 
+
+--
 **Disclaims:**
 The purpose of this post is to keep tracking on my progress for coming up coding interviews. Thanks!
 
