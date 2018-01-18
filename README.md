@@ -1,6 +1,8 @@
 # Coding Interview Challenge
 All of the questions are from leetcode, originally from [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
 
+---
+
 ### Updates
 01-18-2018: Committed all files from local, continue to update every week. 
 
