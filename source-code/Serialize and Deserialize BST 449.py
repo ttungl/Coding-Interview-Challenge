@@ -23,12 +23,11 @@ class Codec:
                 serialize_it(node.left)
                 serialize_it(node.right)
             else:
-                strs.append('#')
-            
-            
+                strs.append('#')  
         strs = []
         serialize_it(root)
         return ' '.join(strs)
+        
         
 
     def deserialize(self, data):
