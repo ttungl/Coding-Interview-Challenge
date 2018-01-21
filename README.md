@@ -4,6 +4,7 @@ All of the questions are from leetcode, credit to [Yangshun Tay](https://github.
 ---
 
 ### Updates
+01-21-2018: Committed several solutions.
 01-18-2018: Committed all files from local, continue to update every week. 
 
 ---
