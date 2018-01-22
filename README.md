@@ -7,7 +7,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 
 ### Updates
 
-01-22-2018: The number of problems solved is around **150**.
+01-22-2018: The number of problems solved is around **150** and will be updated soon.
 
 01-21-2018: Committed several solutions.
 
