@@ -1,11 +1,13 @@
 # Coding Interview Challenge
-All of the questions are from leetcode, credit to [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
+All of the questions are from leetcode, some recommended questions are credit to [Yangshun Tay](https://github.com/yangshun/tech-interview-handbook). 
 
 [Source code](https://github.com/ttungl/Coding-Interview-Challenge/tree/master/source-code) 
 
 ---
 
 ### Updates
+
+01-22-2018: The number of problems solved is around 150.
 
 01-21-2018: Committed several solutions.
 
