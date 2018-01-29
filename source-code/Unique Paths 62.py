@@ -12,12 +12,15 @@ class Solution(object):
         # time O(n^2); space O(n)
         # runtime: 25ms
         # --
-        if not m or not n: return 0
-        count = [1]*n
-        for i in range(1, m):
+        if not m or not n: 
+            return 0
+        
+        count = [1]*n # keep tracking on paths.
+
+        for i in range(1, m): 
             for j in range(1, n):
                 count[j] += count[j-1]
-        return count[-1]
+        return count[-1] # res
             
         # sol 2: DP 2-D
         # time O(n^2); space O(n*m)
@@ -28,6 +31,6 @@ class Solution(object):
         for i in range(1, m):
             for j in range(1, n):
                 dp[i][j] = dp[i-1][j] + dp[i][j-1]
-        return dp[-1][-1]
+        return dp[-1][-1] # res
         
         

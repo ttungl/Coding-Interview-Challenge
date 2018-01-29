@@ -43,11 +43,12 @@ class Solution(object):
         current = [1]*cols
         current[0] = 1 - obstacleGrid[0][0]
 
-        for i in range(1, cols):
+        for i in range(1, cols): # check every col
             current[i] = current[i-1] * (1 - obstacleGrid[0][i])
 
-        for i in range(1, rows):
+        for i in range(1, rows): # check every row
             current[0] *= (1 - obstacleGrid[i][0])
+            
             for j in range(1, cols):
                 current[j] = (current[j-1] + current[j]) * (1 - obstacleGrid[i][j])
 

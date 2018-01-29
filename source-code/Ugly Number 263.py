@@ -10,7 +10,7 @@ class Solution(object):
         # runtime: 35 ms
         p = [2, 3, 5]
         for i in p:
-            while num%i==0 and num > 0: 
+            while num > 0 and num % i==0: 
                 num /= i
         return num==1
         
