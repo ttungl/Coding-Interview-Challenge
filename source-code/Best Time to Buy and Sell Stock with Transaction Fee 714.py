@@ -14,8 +14,8 @@ class Solution(object):
         # runtime: 258ms
         t0, t1 = 0, -sys.maxsize
         
-        for p in prices:
+        for i in prices:
             t0_temp = t0 
-            t0 = max(t0, t1 + p) # sell
-            t1 = max(t1, t0_temp - p - fee) # buy
+            t0 = max(t0, t1 + i) # sell
+            t1 = max(t1, t0_temp - i - fee) # buy
         return t0

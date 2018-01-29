@@ -28,11 +28,14 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         # runtime: 45ms
-        res, level = [], [root]
-        while level and root:
-            res.append([node.val for node in level])
+        res, level = [], [root] 
+        while level and root: # if not empty, append nodes at the same level to res.
+
+            res.append([node.val for node in level]) 
+        
             level = [leaf for x in level
                             for leaf in (x.left, x.right)
-                                if leaf]
+                                if leaf] # collect nodes at the same level tree.
+        
         return res
             

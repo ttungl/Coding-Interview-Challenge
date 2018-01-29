@@ -19,20 +19,16 @@ class Solution(object):
  		# // space complexity: O(n)
        
         # base
-        if root is None: return None
+        if not root: return None
         
         # traverse to the target.
-        if key < root.val:
-            root.left = self.deleteNode(root.left, key)
-        elif key > root.val:
-            root.right = self.deleteNode(root.right, key)
+        if key < root.val:   root.left  = self.deleteNode(root.left, key)
+        elif key > root.val: root.right = self.deleteNode(root.right, key)
+
         else: # key = value
-            
             # node has one left/right, return right/left.
-            if root.left is None:
-                return root.right
-            elif root.right is None:
-                return root.left
+            if not root.left: return root.right
+            elif not root.right: return root.left
             
             ### replace right node to target node
             ### find min node on right. 

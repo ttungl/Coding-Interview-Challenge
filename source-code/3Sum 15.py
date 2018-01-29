@@ -18,9 +18,9 @@ class Solution(object):
         """
         if len(nums) < 3:
             return []
-        nums.sort()
-        res = set()
-        for i, v in enumerate(nums[:-2]):
+        nums.sort() # [-4, -1, -1, 0, 1, 2]
+        res = set() # use set() takes less space than list.
+        for i, v in enumerate(nums[:-2]): 
             if i >= 1 and v == nums[i-1]:
                 continue
             d = {}
@@ -30,3 +30,5 @@ class Solution(object):
                 else:
                     res.add((v, -v-x, x))
         return map(list, res)
+
+

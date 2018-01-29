@@ -14,18 +14,23 @@ class Solution(object):
         # --
         if not asteroids: 
             return asteroids
-        stack = []
+
+        stack = [] # store positive asteroids.
         for ix in asteroids:
+
             if not stack or ix > 0: 
                 stack.append(ix)
-            elif ix < 0:
+
+            elif ix < 0: # pop stack
                 while stack and stack[-1] > 0:
                     if stack[-1] == -ix: # top = cur: break
                         stack.pop()
                         break
+
                     elif stack[-1] < -ix: # top < cur: cont.
                         stack.pop()
                         continue
+                        
                     elif stack[-1] > -ix: # top > cur: break
                         break
                 else:

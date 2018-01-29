@@ -11,6 +11,7 @@
 # to the starting pixel.
 
 
+
 class Solution(object):
     def floodFill(self, image, sr, sc, newColor):
         """
@@ -21,6 +22,7 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         # use dfs if next cell within bounds or same color as source cell.
+        # space O(1)
         # runtime: 93ms
         rows, cols, pix = len(image), len(image[0]), image[sr][sc]
         dir = [(1,0),(-1,0),(0,1),(0,-1)]
@@ -29,8 +31,10 @@ class Solution(object):
             if not (0<=i<rows and 0<=j<cols) \
                     or image[i][j] != pix: 
                 return
+            
             # assign new color
             image[i][j] = newColor
+
             # explore adjacent neighbors
             for d in dir:
                 dfs(i+d[0], j+d[1])
@@ -42,18 +46,22 @@ class Solution(object):
         # sol 2
         # use dfs to check if 4 directions containing (sr,sc) value, 
         # replace by newColor.
+        # space O(n)
         # runtime: 90ms
-        rows, cols = len(image), len(image[0])
+        rows, cols, pix = len(image), len(image[0]), image[sr][sc] 
         dir = ((-1,0),(1,0),(0,1),(0,-1))
         visited = set()
-        pix = image[sr][sc] 
-        def dfs(i, j): 
-            if (i,j) in visited: 
+
+        def dfs(i, j):
+            if (i,j) in visited: # hit the base case.
                 return
+            
             visited.add((i,j)) # visited=((1,1))
+
             # traverse neighbors
             for d in dir: # 4-dir
                 x, y = i+d[0], j+d[1] # x,y =1+(-1), 1+0= 0,1
+                
                 if 0<= x < rows and 0<= y < cols and image[x][y] == pix:
                     image[x][y] = newColor
                     dfs(x,y)

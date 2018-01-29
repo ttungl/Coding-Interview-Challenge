@@ -23,14 +23,14 @@ class Solution:
         
         root = UndirectedGraphNode(node.label)
         
-        queue, visit = [node], {}
+        queue, visit = [node], {} # add nodes to queue.
         
-        visit[node.label] = root
+        visit[node.label] = root # init value for dict.
 
-        while queue:
+        while queue: 
             top = queue.pop()
-            for n in top.neighbors:
-                if n.label not in visit:
+            for n in top.neighbors: # check its neighbors if visited.
+                if n.label not in visit: # add node.
                     queue.append(n)
                     visit[n.label] = UndirectedGraphNode(n.label)
 
@@ -49,11 +49,12 @@ class Solution:
         if node.label in self.visited:
             return self.visited[node.label]
         
-        clone = UndirectedGraphNode(node.label)
+        clone = UndirectedGraphNode(node.label) # init graphnode
         
-        self.visited[node.label] = clone
+        self.visited[node.label] = clone # init value for dict.
         
-        [clone.neighbors.append(self.cloneGraph(n)) for n in node.neighbors]
+        [clone.neighbors.append(self.cloneGraph(n)) 
+                            for n in node.neighbors]
         
         return clone
         

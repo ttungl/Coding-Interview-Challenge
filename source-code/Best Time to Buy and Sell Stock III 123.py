@@ -1,33 +1,20 @@
 # 123. Best Time to Buy and Sell Stock III
 
+# find the maximum profit to complete at most two transactions.
+
 class Solution(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
-
-
-
-
-
-
-
-
-# ----
-
-# public int maxProfit(int[] prices) {
-#     int bought1 = Integer.MIN_VALUE, bought2 = Integer.MIN_VALUE;
-#     int sold1 = 0, sold2=0;
-    
-#     for(int i : prices){
-#         sold1 = Math.max(sold1, bought1 + i);
-#         bought1 = Math.max(bought1, -i);
-#         sold2 = Math.max(sold2, bought2 + i); 
-#         bought2 = Math.max(bought2, sold1 - i);
-        
-        
-#     }
-#     return sold2;
-# }
-
+        # runtime: 60ms       
+        if not prices: return 0
+        b1 = b2 = -sys.maxint
+        s1 = s2 = 0
+        for i in prices:
+        	s1 = max(s1, b1 + i)
+        	b1 = max(b1, -i)
+        	s2 = max(s2, b2 + i)
+        	b2 = max(b2, s1 - i)
+        return s2
