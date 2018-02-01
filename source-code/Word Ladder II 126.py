@@ -50,35 +50,35 @@ class Solution(object):
         # sol 2: Breadth-First Search
         # time O(n^2) space O(n)
         # runtime: 148ms
-        # left, right, wordList = set([beginWord]), set([endWord]), set(wordList)
-        # D, pathLen = collections.defaultdict(list), 1
-        # if endWord not in wordList: 
-        #     return []
-        # while left and right:
-        #     if left & right:
-        #         paths = [[beginWord]]
-        #         for _ in xrange(pathLen - 1):
-        #             paths = [path + [x] for path in paths for x in D[path[-1]]]
-        #         return [path for path in paths if path[-1] == endWord]
-        #     cur = min(left, right, key=len)
-        #     wordList -= cur
-        #     nextCur = set()
-        #     for W in cur:
-        #         for i in range(len(beginWord)):
-        #             for l in string.ascii_lowercase:
-        #                 word = W[:i] + l + W[i + 1:]
-        #                 if word in wordList:
-        #                     nextCur.add(word)
-        #                     if cur is left:
-        #                         D[W].append(word)
-        #                     else:
-        #                         D[word].append(W)
-        #     if cur is left:
-        #         left = nextCur
-        #     else:
-        #         right = nextCur
-        #     pathLen += 1
-        # return []
+        left, right, wordList = set([beginWord]), set([endWord]), set(wordList)
+        D, pathLen = collections.defaultdict(list), 1
+        if endWord not in wordList: 
+            return []
+        while left and right:
+            if left & right:
+                paths = [[beginWord]]
+                for _ in xrange(pathLen - 1):
+                    paths = [path + [x] for path in paths for x in D[path[-1]]]
+                return [path for path in paths if path[-1] == endWord]
+            cur = min(left, right, key=len)
+            wordList -= cur
+            nextCur = set()
+            for W in cur:
+                for i in range(len(beginWord)):
+                    for l in string.ascii_lowercase:
+                        word = W[:i] + l + W[i + 1:]
+                        if word in wordList:
+                            nextCur.add(word)
+                            if cur is left:
+                                D[W].append(word)
+                            else:
+                                D[word].append(W)
+            if cur is left:
+                left = nextCur
+            else:
+                right = nextCur
+            pathLen += 1
+        return []
             
             
         
