@@ -4,7 +4,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 [Source code](https://github.com/ttungl/Coding-Interview-Challenge/tree/master/source-code) 
 
 ---
-* Leetcode account: **@cacs**
+* Leetcoder: **@cacs**
 ---
 
 ### Updates
