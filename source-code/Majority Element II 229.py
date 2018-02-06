@@ -7,11 +7,11 @@
 class Solution(object):
     def majorityElement(self, nums):
         # sol 1
-        # time O(n) space O(1)
+        # time O(n) space O(k)
         # runtime: 50ms
         if not nums: return []
         n, res = len(nums)//3, []
-        setnums = set(nums)
+        setnums = set(nums) # if there's no repetition for all elements, space could take O(n)!! In general cases, space takes O(k).
         for i in setnums:
             if nums.count(i) > n: res.append(i)
         return res
