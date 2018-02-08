@@ -9,6 +9,8 @@ All of the questions are from leetcode, some recommended questions are credit to
 
 ### Updates
 
+02-07-2018: Updated weekly contest 70, problems 776, 779.
+
 01-28-2018: Updated weekly contest 69, problems 771, 774, and 775.
 
 01-22-2018: The number of problems solved is around **150**. It also includes the latest weekly contests' questions. 
