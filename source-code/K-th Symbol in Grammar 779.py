@@ -1,8 +1,11 @@
 # 779. K-th Symbol in Grammar
 
-# On the first row, we write a 0. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.
+# On the first row, we write a 0. Now in every subsequent row, 
+# we look at the previous row and replace each occurrence of 0 with 01, 
+# and each occurrence of 1 with 10.
 
-# Given row N and index K, return the K-th indexed symbol in row N. (The values of K are 1-indexed.) (1 indexed).
+# Given row N and index K, return the K-th indexed symbol in row N. 
+# (The values of K are 1-indexed.) (1 indexed).
 
 # Examples:
 # Input: N = 1, K = 1
@@ -22,8 +25,8 @@
 # row 2: 01
 # row 3: 0110
 # row 4: 01101001
-# Note:
 
+# Note:
 # N will be an integer in the range [1, 30].
 # K will be an integer in the range [1, 2^(N-1)].
 
@@ -54,9 +57,13 @@ class Solution(object):
         # when N is increased by 1, the sequence extends by flipping itself, e.g. 0110 -> 0110 1001. 
         # Those extended Ks are exactly the originals with a prefixing 1 in their binary representations, 
         # which exactly changes the parity of the number of 1s. 
+        # current row:  K   = 1   2    3    4    5    6    7    8    9     10
+        # previous row: K-1 = 0   1    10   11  100   101  110  111 1000  1001     
+        # output:   		  0   1    1     0   1     0    0   1    1     0
         return bin(K-1).count("1")%2
         
         # sol 3:
+        # current row is double K of previous 
         # runtime: 31ms
         flip=0
         while K>1:  			# K=5;=3;=2
@@ -65,7 +72,36 @@ class Solution(object):
         return flip%2           # f%2=1
         
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
         
