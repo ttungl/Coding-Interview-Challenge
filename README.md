@@ -9,7 +9,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 
 ### Updates
 
-02-13-2018: Updated weekly contest 71, problems 781, 783.
+02-13-2018: Updated weekly contest 71, problems 780, 781, 783.
 
 02-07-2018: Updated weekly contest 70, problems 776, 779.
 
