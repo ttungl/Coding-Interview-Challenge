@@ -9,17 +9,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 
 ### Updates
 
-02-13-2018: Updated weekly contest 71, problems 780, 781, 783.
-
-02-07-2018: Updated weekly contest 70, problems 776, 779.
-
-01-28-2018: Updated weekly contest 69, problems 771, 774, and 775.
-
-01-22-2018: The number of problems solved is around **150**. It also includes the latest weekly contests' questions. 
-
-01-21-2018: Committed several solutions.
-
-01-18-2018: Committed all files from local, continue to update every week. 
+[02-18-2018: Contest 72, probs 784, 785] [02-13-2018: Contest 71, probs 780, 781, 783] [02-07-2018: Updated weekly contest 70, problems 776, 779] [01-28-2018: Updated weekly contest 69, problems 771, 774, and 775] [01-22-2018: The number of problems solved is around **150**. It also includes the latest weekly contests' questions] [01-21-2018: Committed several solutions] [01-18-2018: Committed all files from local, continue to update every week]
 
 ---
 
