@@ -20,7 +20,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 ---
 
 **Disclaims:**
-The purpose of this post is to keep track of my progress for coming up coding interviews. Thanks!
+The purpose of this post is to keep track of my progress for upcoming coding interviews. Thanks!
 
 1. **Array** [10]
     + Two Sum
