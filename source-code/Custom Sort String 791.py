@@ -35,7 +35,7 @@ class Solution(object):
         :rtype: str
         """
         # sol 1
-        # time O(n^2) space O(n)
+        # time O(n^m) space O(n)
         # runtime: 60ms
         P, S, T = [], [s for s in S], [t for t in T]
         dic = dict([i, T.count(i)] for i in T)
@@ -58,4 +58,3 @@ class Solution(object):
     
     
     
-        
