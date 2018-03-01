@@ -12,7 +12,8 @@ class Solution(object):
         for i in range(len(s)-1): # i=M;
             if d[s[i]] < d[s[i+1]]: #  
                 res -= d[s[i]]
-            else: res += d[s[i]] # res+=1000;
+            else: 
+                res += d[s[i]] # res+=1000;
         return res+d[s[-1]]
         
 
