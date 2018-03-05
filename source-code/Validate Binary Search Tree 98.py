@@ -37,7 +37,8 @@ class Solution(object):
         # sol 1: recursive
         # runtime: 61ms
         def recursive(node, low, high):
-            if not node: return True
+            if not node: 
+            	return True
             return low < node.val < high and recursive(node.left, low, node.val) and recursive(node.right, node.val, high)
         return recursive(root, -sys.maxint, sys.maxint)
     
