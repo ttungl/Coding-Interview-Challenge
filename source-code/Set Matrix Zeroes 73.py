@@ -41,6 +41,25 @@ class Solution(object):
                     visited.add((i, j))
                     zerosRowCol(i, j, visited)
         
+        # sol 1 updated
+        # runtime: 189ms
+        def cleaningRC(matrix, i, j):
+            for r in range(len(matrix)):
+                if (r,j) not in visited and matrix[r][j]!=0:
+                    matrix[r][j] = 0
+                    visited.add((r,j))
+            for c in range(len(matrix[0])):
+                if (i,c) not in visited and matrix[i][c]!=0:
+                    matrix[i][c] = 0
+                    visited.add((i,c))
+                
+        visited = set()
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if matrix[i][j] == 0 and (i,j) not in visited:
+                    visited.add((i,j))
+                    cleaningRC(matrix, i, j)
+                    
     
         # sol 2
         # time O(n^2) space O(m*n)
