@@ -32,23 +32,23 @@ class Solution(object):
         # sol 1:
         # use init_1
         # runtime: 52ms
-    #     if not num:
-    #         return "Zero"
-    #     res = ""
-    #     for i in range(len(self.thousands)):
-    #         if not (num % 1000 == 0):
-    #             res = self.wordsProcess(num % 1000) + self.thousands[i] + " " + res
-    #         num /= 1000
-    #     return res.strip()
-    # def wordsProcess(self, num):
-    #     if not num:
-    #         return ""
-    #     elif num < 20:
-    #         return self.lessThan20[num] + " "
-    #     elif num < 100:
-    #         return self.tens[num/10] + " " + self.wordsProcess(num % 10)
-    #     else:
-    #         return self.lessThan20[num/100] + " Hundred " + self.wordsProcess(num % 100)
+        if not num:
+            return "Zero"
+        res = ""
+        for i in range(len(self.thousands)):
+            if not (num % 1000 == 0):
+                res = self.wordsProcess(num % 1000) + self.thousands[i] + " " + res
+            num /= 1000
+        return res.strip()
+    def wordsProcess(self, num):
+        if not num:
+            return ""
+        elif num < 20:
+            return self.lessThan20[num] + " "
+        elif num < 100:
+            return self.tens[num/10] + " " + self.wordsProcess(num % 10)
+        else:
+            return self.lessThan20[num/100] + " Hundred " + self.wordsProcess(num % 100)
     
         # sol 2:
         # use init_2
