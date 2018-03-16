@@ -20,8 +20,10 @@ class Solution(object):
         # sol 2: recursive
         # runtime: 32ms
         m, n = len(s), len(t)
-        if m>n: return self.isOneEditDistance(t,s) # swap str length
-        if (n-m)>1 or s==t: return False
+        if m>n: 
+            return self.isOneEditDistance(t,s) # swap str length
+        if (n-m)>1 or s==t: 
+            return False
         for i in range(m): 
             if s[i]!=t[i]:
                 return s[i+1:]==t[i+1:] or s[i:]==t[i+1:]   
