@@ -53,8 +53,62 @@ class Solution(object):
                 dfs(board, i, j, trie, '', res)
         return list(set(res))
     
+# sol 2:
+# runtime: 826ms
+class TrieNode(object):
+    def __init__(self):
+        self.children = collections.defaultdict(list)
+        
+class Solution(object):
+    def __init__(self):
+        self.directions = ((0,1),(0,-1),(1,0),(-1,0))
+        self.root = TrieNode()
+    
+    def insert(self, word):
+        node = self.root
+        for c in word:
+            if c not in node.children:
+                node.children[c] = TrieNode()
+            node = node.children[c]
+        node.children['#'] = '#'
+                
+    def findWords(self, board, words):
+        """
+        :type board: List[List[str]]
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        # sol 1:
+        # use DFS and trie.
+        # runtime: 844ms
+        res = []
+        node = self.root
+        for word in words:
+            self.insert(word)
+        
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                self.dfs(board, i, j, node, '', res)
+        return list(set(res))
+    
+    def dfs(self, board, i, j, node, path, res):
+        if '#' in node.children:
+            res.append(path)
+        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or board[i][j] not in node.children:
+            return
+        tmp = board[i][j]
+        board[i][j] = '@'
+        [self.dfs(board, i+d[0], j+d[1], node.children[tmp], path+tmp, res) for d in self.directions]
+        board[i][j] = tmp
+        ##  
+    
         
     
+        
+    
+        
+            
+
         
             
             
