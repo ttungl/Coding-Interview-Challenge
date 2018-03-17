@@ -53,6 +53,7 @@ class Solution(object):
                 dfs(board, i, j, trie, '', res)
         return list(set(res))
     
+    
 # sol 2:
 # runtime: 826ms
 class TrieNode(object):
