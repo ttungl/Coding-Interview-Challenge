@@ -57,8 +57,9 @@ class Solution(object):
     
         # sol 2:
         # BFS iterative
-        # runtime: 62ms
-        stack, node, last, depths = [], root, None, {}
+        # runtime: 68ms
+        stack, node = [], root
+        last, depths = None, collections.defaultdict(int)
         while stack or node:
             if node:
                 stack.append(node)
@@ -67,11 +68,11 @@ class Solution(object):
                 node = stack[-1]
                 if not node.right or last == node.right:
                     node = stack.pop()
-                    left, right  = depths.get(node.left, 0), depths.get(node.right, 0)
-                    if abs(left - right) > 1: return False
+                    left, right  = depths[node.left], depths[node.right]
+                    if abs(left - right) > 1: 
+                        return False
                     depths[node] = 1 + max(left, right)
-                    last = node
-                    node = None
+                    last, node = node, None
                 else:
                     node = node.right
         return True
