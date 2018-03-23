@@ -31,16 +31,16 @@ class Solution(object):
         # sol 1:
         # DFS:
         # runtime: 48ms
-        def dfs(root, res):
+        def dfs(root):
             if root:
                 res.append(root.val)
-            if root.left: dfs(root.left, res)
-            if root.right: dfs(root.right, res)
+            if root.left: dfs(root.left)
+            if root.right: dfs(root.right)
             return res
         if not root:
             return []
         res = []
-        return dfs(root, res)
+        return dfs(root)
     
         # sol 2:
         # DFS-2

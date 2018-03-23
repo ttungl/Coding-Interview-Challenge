@@ -22,6 +22,17 @@ class Solution(object):
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
     
     
+        # sol 2
+        # BFS iterative
+        # runtime: 76ms
+        if not root:
+            return 0
+        res, queue = 0, [root] # node,depth
+        while queue:
+            queue = [leaf for i in queue for leaf in (i.left, i.right) if leaf]
+            res += 1
+        return res
+    
         # sol 2: iterative (BFS) using stack for level order
         # count the number of level in binary tree
         # runtime: 48ms

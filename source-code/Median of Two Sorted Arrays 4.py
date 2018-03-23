@@ -8,38 +8,31 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: float
         """
-        # reference: lc discussion
-        A = nums1; B=nums2        
-        m, n = len(A), len(B)
-        if m > n:
-            A, B, m, n = B, A, n, m
-        if n == 0:
-            raise ValueError
-        imin, imax, half_len = 0, m, (m + n + 1) / 2
-        while imin <= imax:
-            i = (imin + imax) / 2
-            j = half_len - i
-            if i < m and B[j-1] > A[i]:
-                # i is too small, must increase it
-                imin = i + 1
-            elif i > 0 and A[i-1] > B[j]:
-                # i is too big, must decrease it
-                imax = i - 1
-            else:
-                # i is perfect
-                if i == 0: max_of_left = B[j-1]
-                elif j == 0: max_of_left = A[i-1]
-                else: max_of_left = max(A[i-1], B[j-1])
-                if (m + n) % 2 == 1:
-                    return max_of_left
-                if i == m: min_of_right = B[j]
-                elif j == n: min_of_right = A[i]
-                else: min_of_right = min(A[i], B[j])
-                return (max_of_left + min_of_right) / 2.0
+        # sol 1:
+        # runtime: 97ms
+        nums = nums1 + nums2
+        nums.sort()
+        n = len(nums)
+        if n < 1:
+            return 0.0
+        if n % 2 == 1:
+            return float(nums[n//2])
+        else:
+            return sum(nums[n//2-1:n//2+1])/2.0
         
-        
-        # sol 2
-        # runtime:
+        # sol 2:
+        # use priority queue
+        # time O(nlogn) space O(n)
+        # runtime: 385ms
+        nums = nums1 + nums2
+        loHeap, hiHeap = [], []
+        for num in sorted(nums):
+            heappush(loHeap, -heappushpop(hiHeap, num))
+            if len(loHeap) > len(hiHeap):
+                heappush(hiHeap, -heappop(loHeap))
+        if len(loHeap) >= len(hiHeap):
+            return (hiHeap[0] - loHeap[0])/2.0
+        return float(hiHeap[0])
         
             
             

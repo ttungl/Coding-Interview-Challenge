@@ -33,19 +33,19 @@ class Solution(object):
         # sol 1:
         # DFS
         # runtime: 59ms
-        def dfs(root, cnt, res):
+        def dfs(root, cnt):
             if not root.left and not root.right:
                 if cnt == sum:
                     res.append(True)
             if root.left: 
-                dfs(root.left, cnt+root.left.val, res)
+                dfs(root.left, cnt + root.left.val)
             if root.right: 
-                dfs(root.right, cnt+root.right.val, res)
-
+                dfs(root.right, cnt + root.right.val)
+        #
         if not root:
             return False
         cnt, res = 0, []
-        dfs(root, root.val, res)
+        dfs(root, root.val)
         return any(res)
         
         # sol 2:
@@ -55,7 +55,7 @@ class Solution(object):
             return False
 
         stack = [(root, root.val)]
-        
+
         while stack:
             node, value = stack.pop()
             if not node.left and not node.right:
