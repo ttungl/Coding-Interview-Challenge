@@ -7,7 +7,8 @@ class MinStack(object):
         self.stack = []
 
     def push(self, x):
-    	if not self.stack: self.stack.append((x, x))
+    	if not self.stack: 
+            self.stack.append((x, x))
     	else:
         	self.stack.append((x, min(x, self.stack[-1][1]))) # keep track on x and min.
 

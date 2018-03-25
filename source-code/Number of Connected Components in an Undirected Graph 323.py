@@ -27,7 +27,7 @@ class Solution(object):
         :rtype: int
         """
         # sol 1:
-        # DFS
+        # BFS
         # 1. convert edges to adjacent list of the graph
         # 2. keep track of visited nodes
         # 3. use stack to perform DFS.
