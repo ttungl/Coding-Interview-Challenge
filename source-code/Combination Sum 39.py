@@ -16,14 +16,16 @@ class Solution(object):
         """
         # sol 1:
         # Use DFS backtracking
+        # in the range of (index, length of candidates),
+        # after hitting the base case, return.
         # Runtime: 175ms
         def DFS(candidates, target, index, path, res):
             if target < 0: return 
-            if target ==0: # end 
+            if target ==0: # hit base case 
                 res.append(path)
                 return
             for i in range(index, len(candidates)): # each entire loop for each call
-                DFS(candidates, target-candidates[i], i, path+[candidates[i]], res)
+                DFS(candidates, target - candidates[i], i, path + [candidates[i]], res)
             
         res, path = [], []
         DFS(sorted(candidates), target, 0, path, res)
@@ -37,8 +39,8 @@ class Solution(object):
                 res.append(path)
                 return
             while index >=0 and index < len(nums) and nums[index] <= target:
-                DFS(nums, target-nums[index], index, path+[nums[index]], res)
-                index+=1
+                DFS(nums, target - nums[index], index, path + [nums[index]], res)
+                index += 1
             
         res, path = [], []
         DFS(sorted(candidates), target, 0, path, res)

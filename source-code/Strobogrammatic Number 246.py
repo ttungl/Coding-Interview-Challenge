@@ -35,7 +35,7 @@ class Solution(object):
         if not num:
             return True
         n = len(num)
-        for i in range(int(n/2)+1):
+        for i in range(n//2 + 1):
             if num[i] not in maps or maps[num[i]] != num[-i-1]:
                 return False
         return True

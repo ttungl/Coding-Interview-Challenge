@@ -58,11 +58,10 @@ class Solution(object):
             if idx == len(word):
                 return True
             for d in directions:
-                x, y = i+d[0], j+d[1]
+                x, y = i + d[0], j + d[1]
                 if 0 <= x < len(board) and 0 <= y < len(board[0]) and word[idx]==board[x][y]:
                     board[x][y] = '*'
-                    res = dfs(x, y, idx+1)
-                    if res:
+                    if dfs(x, y, idx + 1):
                         return True
                     board[x][y] = word[idx]
             return False

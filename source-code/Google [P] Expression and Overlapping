@@ -1,0 +1,79 @@
+Please use this Google doc to code during your interview. To free your hands for coding, we recommend that you use a headset or a phone with speaker option.
+I am here hi!
+
+[1,3] and [2,4]
+is_overlapping((a, b), (c, d))
+
+(a, b) : (start, end)
+(c, d) : (i.s, i.e)
+t1 = (a,b)
+t2 = (c,d)
+
+t1 = (1,3)
+t2 = (2,4)
+
+t1 = (2,4)
+t2 = (1,3)
+
+def is_overlapping(t1, t2):
+   if t1[0] > t2[0]:
+       t1, t2 = t2, t1
+
+   s1, e1 = t1[0], t1[1]
+   s2, e2 = t2[0], t2[1]
+   if e1 > s2:
+      return True
+   return False
+
+2 * (3 + 5)
+
+expr ::= int | ‘(‘ op expr+ ‘)’
+op ::= ‘+’ | ‘*’
+“3”
+“( + 1 2 )”
+“( * 1 3 )”
+
+“( + (* 1 2) 1)”
+
+return int 
+
+“3”
+“( + (* 1 2) 1)”
+“( + ( + ( ) ( ) ) ( ( ) ( ) )”
+"( + ( + (+ 1 2) (+ 1 2)) (+ (+ 1 2) (+1 2))"
+"( + tem (+ (+ 1 2) (+ 1 2)))"
+"tem"
+
+
+“( $ 1 2 )” runtime = 10 minutes
+“( + ( $ 1 2 ) ( $ 1 2 ) )” 
+
+
+
+(+ tem 1)
+def solution(str):
+   stack = []
+   str = str.split()
+   for c in str: # O(n)
+      if c.isdigit():
+         stack.append(int(c)) 
+      if c == ‘)’:
+         a, b, op = stack.pop(), stack.pop(), stack.pop()
+         if op == “*”:
+             tem = a*b
+             stack.pop() # “(”
+             stack.append(tem) # s = 
+         elif op == “+”:
+             tem = a+b
+             stack.pop() # “(”
+             stack.append(tem) # s =  
+      else:
+         stack.append(c) # s = (+(*
+
+    return stack[0]   
+ 
+
+
+
+
+

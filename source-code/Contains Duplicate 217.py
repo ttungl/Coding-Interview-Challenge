@@ -10,9 +10,12 @@ class Solution(object):
             return False
         dic = {}
         for i in nums:
-            if i not in dic: dic[i] = 1
-            else: dic[i] += 1 
+            if i not in dic: 
+                dic[i] = 1
+            else: 
+                dic[i] += 1 
         for i in dic.values(): 
-            if i>=2: return True
+            if i>=2: 
+                return True
         return False
         

@@ -20,7 +20,7 @@ class Solution(object):
         def robsub(node):
             now, prev = 0,0
             for i in nums:
-                now, prev = max(now, prev+i), now
+                now, prev = max(now, prev + i), now
             return now
         # recursive on left and right elements.
         return max(robsub(nums[:-1]), robsub(nums[1:])) 

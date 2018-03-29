@@ -34,6 +34,10 @@ class Solution(object):
     
     
         # sol 2:
+        # check any empty rooms available (a > 0), if so, take it (a-=1).
+        # if not, find new room (numroom +=1).
+        # after finishing the meeting (end[index] <= current start),
+        # the room becomes available (a += 1) and index += 1.
         # runtime: 70ms
         starts = sorted(i.start for i in intervals)
         ends = sorted(i.end for i in intervals)

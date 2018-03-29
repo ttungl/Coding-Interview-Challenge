@@ -11,12 +11,12 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        # runtime: 26ms
-        if n <=2: return n
-        one, two, res = 1, 0, 0
-        for i in range(n): # n=5
-            res = one + two # res=1,2,3,5
-            two = one       # two=1,1,2,3
-            one = res       # one=1.2,3,5
-        return res          # 5
+        # sol 1:
+        # runtime: 36ms
+        s1, s2, res = 0, 1, 0
+        for i in range(n):
+            res = s1 + s2
+            s1, s2 = s2, res
+        return res
+            
 

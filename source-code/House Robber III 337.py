@@ -41,7 +41,8 @@ class Solution(object):
         # space: O(h)
         # runtime: 82ms
         def robsub(root):
-            if not root: return (0,0)
+            if not root: 
+                return (0,0)
             leftrob, rightrob = robsub(root.left), robsub(root.right)
             first, second = root.val + leftrob[1] + rightrob[1], max(leftrob) + max(rightrob)
             return (first, second)
@@ -50,7 +51,8 @@ class Solution(object):
         # sol 2
         # runtime: 66ms
         def DFS(node):
-            if not node: return (0,0) # stop
+            if not node: 
+                return (0,0) # stop
             leftrob, rightrob = DFS(node.left), DFS(node.right)
             # current level
             cur = [leftrob[0] + rightrob[0], leftrob[1] + rightrob[1]]

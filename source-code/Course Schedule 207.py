@@ -29,8 +29,10 @@ class Solution(object):
         visit = [0]*numCourses
         
         def DFS(i):
-            if visit[i] == -1: return False # if -1 in visit, it's a ring.
-            elif visit[i] == 1: return True # if 1 in visit, there's no ring contain node v and its successor. 
+            if visit[i] == -1: 
+                return False # if -1 in visit, it's a ring.
+            elif visit[i] == 1: 
+                return True # if 1 in visit, there's no ring contain node v and its successor. 
 
             visit[i] = -1 # being visited
 

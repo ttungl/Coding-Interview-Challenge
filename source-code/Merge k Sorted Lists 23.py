@@ -42,6 +42,7 @@ class Solution(object):
             # the rest   
             node.next = list1 if not list2 else list2
             return dummy.next
+            
         mid = len(lists)/2
         left = self.mergeKLists(lists[:mid])
         right = self.mergeKLists(lists[mid:])

@@ -15,8 +15,10 @@ class Solution(object):
             return 0
         res, cur = 0, prices[0]
         for i in prices[1:]:
-            if i > cur: res = max(res, i - cur) 
-            else: cur = i # update current
+            if i > cur: 
+                res = max(res, i - cur) 
+            else: 
+                cur = i # update current
         return res
 
         # Kadane's algorithm

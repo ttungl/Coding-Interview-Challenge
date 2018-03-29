@@ -18,7 +18,7 @@ class Solution(object):
             x = target - num # remaining amount of target
             if x in d: # check if it's in dictionary to return its index and current index. Otherwise, adding i to num dictionary.
                 return d[x], i 
-            d[num]=i 
+            d[num] = i 
         
         # sol 2:
         # runtime: 39ms

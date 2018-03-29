@@ -24,7 +24,8 @@ class Solution(object):
         # recursive
         # runtime: 59 ms
         def revlist(head, prev=None):
-            if not head: return prev
+            if not head: 
+                return prev
             next = head.next
             head.next = prev
             return revlist(next, head)

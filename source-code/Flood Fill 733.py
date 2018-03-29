@@ -27,16 +27,10 @@ class Solution(object):
         rows, cols, pix = len(image), len(image[0]), image[sr][sc]
         dir = [(1,0),(-1,0),(0,1),(0,-1)]
         def dfs(i, j):
-            # check within bounds
-            if not (0<=i<rows and 0<=j<cols) \
-                    or image[i][j] != pix: 
+            if not (0<=i<rows and 0<=j<cols) or image[i][j] != pix: # check within bounds
                 return
-            
-            # assign new color
-            image[i][j] = newColor
-
-            # explore adjacent neighbors
-            for d in dir:
+            image[i][j] = newColor # assign new color
+            for d in dir: # explore adjacent neighbors
                 dfs(i+d[0], j+d[1])
                 
         if newColor != pix:    
@@ -78,7 +72,8 @@ class Solution(object):
         # runtime: 88ms
         rows, cols = len(image), len(image[0])
         pixel = image[sr][sc]
-        if newColor == pixel: return image
+        if newColor == pixel: 
+            return image
         
         dir = ((-1,0),(1,0),(0,-1),(0,1))
 
@@ -88,11 +83,14 @@ class Solution(object):
         queue = [(sr, sc)]
         while queue:
             i, j = queue.pop()
+            
             image[i][j]=newColor
+
             for d in dir: # traverse neighbors
-                x, y = i+d[0], j+d[1]
+                x, y = i + d[0], j + d[1]
                 if image[x][y]==pixel:
                     queue.append((x,y))
+
         return [res[:-1] for res in image[:-1]]
 
 

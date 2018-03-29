@@ -22,13 +22,14 @@ class Solution(object):
         # 3. connect m to n+1, and connect n to m-1.
         # 4. return dummy.next
         # runtime: 32ms
-        if not head or m==n: return head
+        if not head or m==n: 
+            return head
 
         dummyNode = prev = ListNode(0)
         dummyNode.next = head
         
         # 1. go to the index m.
-        for _ in range(m-1): 
+        for _ in range(m - 1): 
             prev = prev.next
         
         # 2. reverse within the range [m,n]

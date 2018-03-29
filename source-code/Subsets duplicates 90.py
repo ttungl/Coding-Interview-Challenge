@@ -13,7 +13,7 @@ class Solution(object):
             for i in range(index, len(nums)):
                 if i > index and nums[i]==nums[i-1]: 
                     continue
-                DFS(nums, i+1, path+[nums[i]], res)
+                DFS(nums, i+1, path + [nums[i]], res)
             
         res = []
         DFS(sorted(nums), 0, [], res)

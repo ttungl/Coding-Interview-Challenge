@@ -79,9 +79,6 @@ class Solution(object):
         :type words: List[str]
         :rtype: List[str]
         """
-        # sol 1:
-        # use DFS and trie.
-        # runtime: 844ms
         res = []
         node = self.root
         for word in words:
@@ -99,7 +96,9 @@ class Solution(object):
             return
         tmp = board[i][j]
         board[i][j] = '@'
-        [self.dfs(board, i+d[0], j+d[1], node.children[tmp], path+tmp, res) for d in self.directions]
+        for d in self.directions:
+        	x, y = i + d[0], j + d[1]
+        	self.dfs(board, x, y, node.children[tmp], path + tmp, res)
         board[i][j] = tmp
         ##  
     

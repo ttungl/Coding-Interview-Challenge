@@ -37,8 +37,10 @@ class Solution(object):
         p1, p2, n = 1, 1, len(nums)
         res = [1]*n
         for i in range(n):
-            res[i]*=p1; res[n-i-1]*=p2
-            p1*=nums[i]; p2*=nums[n-i-1]
+            res[i] *= p1; res[n-i-1] *= p2
+
+            p1 *= nums[i]; p2 *= nums[n-i-1]
+
         return res
             
             
