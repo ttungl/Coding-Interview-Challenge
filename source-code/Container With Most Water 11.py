@@ -33,10 +33,10 @@ class Solution(object):
         res = [0]*len(height)
         while l < r:
             if height[l] <= height[r]:
-                res[l] = height[l]*(r-l) 
+                res[l] = height[l]*(r - l) 
                 l += 1
             else:
-                res[r] = height[r]*(r-l)
+                res[r] = height[r]*(r - l)
                 r -= 1
         return max(res)
         

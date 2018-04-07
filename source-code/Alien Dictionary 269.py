@@ -31,6 +31,9 @@ class Solution(object):
         return ''.join(order + list(chars))
     
         # sol 2
+        # stores predecessor and successor of chars. Use defaultdict(set).
+        # BFS for each predecessor, traverse on successor, append to res. 
+        # runtime: 64ms
         pre, suc = collections.defaultdict(set), collections.defaultdict(set)
         for pair in zip(words, words[1:]):
             for a, b in zip(*pair):
@@ -42,13 +45,15 @@ class Solution(object):
         free = chars - set(pre)
         order = ''
         while free:
-            a = free.pop()
-            order += a
-            for b in suc[a]:
-                pre[b].discard(a)
+            char = free.pop()
+            order += char
+            for b in suc[char]:
+                pre[b].discard(char)
                 if not pre[b]:
                     free.add(b)
         return order * (set(order) == chars)
+
+        
         
 ## Test cases
 # if __name__ == "__main__":

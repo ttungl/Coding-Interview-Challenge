@@ -48,6 +48,28 @@ class Solution(object):
             self.dfs(grid, i,j+1)
     
 
+		# sol 3:
+	    # DFS
+	    # runtime: 117ms
+	    def dfs(grid, i, j):
+	        if 0 <= i < len(grid) and 0<= j <len(grid[0]) and grid[i][j] == '1':
+	            grid[i][j] = '#'
+	            dfs(grid, i+1, j)
+	            dfs(grid, i-1, j)
+	            dfs(grid, i, j-1)
+	            dfs(grid, i, j+1)
+	    if not grid:
+	        return 0
+	    rows, cols = len(grid), len(grid[0])
+	    count = 0
+	    for i in range(rows):
+	        for j in range(cols):
+	            if grid[i][j]=='1':
+	                count += 1
+	                dfs(grid, i, j)
+	    return count
+	
+
 
     # sol 2: use stack
     # runtime: 82ms
@@ -57,28 +79,24 @@ class Solution(object):
 	    	return 0
 	    rows, cols, count = len(grid), len(grid[0]), 0
 	    for i in range(rows):
-	        for j in range(cols):
-	            if grid[i][j]=="0":
-	                continue
-	            else:
-	                count +=1
-	                stack = []
-	                stack.append([i,j])
-	                # 
-	                while len(stack) !=0:
-	                    [x, y] = stack.pop()
-	                    
-	                    if x >= 1 and grid[x-1][y]=="1": 
-	                        stack.append([x-1, y])
-	                    if x < rows-1 and grid[x+1][y]=="1": 
-	                        stack.append([x+1, y])
-	                        
-	                    if y >= 1 and grid[x][y-1]=="1": 
-	                        stack.append([x, y-1])
-	                    if y < cols-1 and grid[x][y+1]=="1": 
-	                        stack.append([x, y+1])
-	                    # update cell
-	                    grid[x][y] = "0"
-	    return count
+            for j in range(cols):
+                if grid[i][j] == "0":
+                    continue
+                else:
+                    count +=1
+                    stack = []
+                    stack.append([i,j])
+                    while stack:
+                        x, y = stack.pop()
+                        if x > 0 and grid[x-1][y]=="1":
+                            stack.append([x-1,y])
+                        if x < rows-1 and grid[x+1][y]=="1":
+                            stack.append([x+1, y])
+                        if y > 0 and grid[x][y-1]=="1":
+                            stack.append([x, y-1])
+                        if y < cols-1 and grid[x][y+1]=="1":
+                            stack.append([x, y+1])
+                        grid[x][y] = "0"
+        return count
 
 
