@@ -8,6 +8,7 @@ All of the questions are from leetcode, some recommended questions are credit to
 ---
 
 ### Updates
+    [04-06-2018: Contest 78, probs 808, 809, 810, 811]
     [03-25-2018: Contest 77, probs 804, 806, 807]
     [03-20-2018: Contest 76, probs 800, 801, 802]
     [03-11-2018: Contest 75, probs 796, 797, 798, 799]
