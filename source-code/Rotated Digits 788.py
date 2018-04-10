@@ -20,7 +20,7 @@
 # N  will be in range [1, 10000].
 
 
-import itertools
+# import itertools
 class Solution(object):
     def rotatedDigits(self, N):
         """

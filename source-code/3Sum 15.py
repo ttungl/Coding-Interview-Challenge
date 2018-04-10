@@ -17,6 +17,7 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         # sol 1:
+        # binary search
         # runtime: 1476ms
         res = []
         nums.sort()
@@ -24,9 +25,7 @@ class Solution(object):
         for i in range(len(nums)-2):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
-
             lo, hi = i + 1, len(nums)-1
-            
             while lo < hi:
                 s = nums[i] + nums[lo] + nums[hi]
         
@@ -67,7 +66,7 @@ class Solution(object):
                     d[-v-x] = 1 # d[-1-(-1)]=d[0]=1; 
                 else:
                     res.add((v, -v-x, x)) # res=(-1, 0, -1)
-        return map(list, res)
+        return map(list, res) # or use "list(s for s in res)"
     
 
 
@@ -75,29 +74,25 @@ class Solution(object):
 
         # sol 3:
         # runtime: 580ms
-        counter = {}
-        for num in nums:
-            if num not in counter:
-                counter[num] = 0
-            counter[num] += 1
-        if 0 in counter and counter[0] > 2:
-            rst = [[0, 0, 0]]
-        else:
-            rst = []
+        counter = collections.defaultdict(int)
+        for num in nums: counter[num] += 1
+        if 0 in counter and counter[0] > 2: 
+            res = [[0, 0, 0]]
+        else: res = []
         uniques = counter.keys()  
-        pos = sorted(p for p in uniques if p > 0) 
+        pos = sorted(p for p in uniques if p > 0)
         neg = sorted(n for n in uniques if n < 0)
         for p in pos:
             for n in neg:
                 inverse = -(p + n)  
                 if inverse in counter:
                     if inverse == p and counter[p] > 1:
-                        rst.append([n, p, p])
+                        res.append([n, p, p])
                     elif inverse == n and counter[n] > 1:
-                        rst.append([n, n, p])
+                        res.append([n, n, p])
                     elif n<inverse< p or inverse == 0:
-                        rst.append([n, inverse, p])
-        return rst
+                        res.append([n, inverse, p])
+        return res
                     
                     
         
