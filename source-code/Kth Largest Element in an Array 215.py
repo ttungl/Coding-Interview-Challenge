@@ -23,7 +23,7 @@ class Solution(object):
         return sorted(nums)[-k]
         
         # sol 2
-        # time O(n+(n-k)logk)
+        # time O(k+(n-k)logk) without sorted. # if maxheap O(n + klogn)
         heap = [] # minheap
         for i in nums:
             heapq.heappush(heap, i)

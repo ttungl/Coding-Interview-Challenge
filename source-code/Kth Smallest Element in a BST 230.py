@@ -34,13 +34,17 @@ class Solution(object):
             while node!=None:
                 stack.append(node)
                 node = node.left
-            if stack!=[]:
+
+            if stack != []:
                 node = stack.pop()
-                k-=1
-                if k==0: return node.val
+                k -= 1
+                if k == 0: 
+                    return node.val
                 node = node.right
+            
             else:
-                state=True
+                state = True
+                
                 
         # sol 3:
         # Use binary search

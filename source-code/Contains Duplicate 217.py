@@ -6,16 +6,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
+        # sol 1:
+        # runtime: 75ms
         if not nums or len(nums)==1: 
             return False
-        dic = {}
+        dic = collections.defaultdict(int)
         for i in nums:
-            if i not in dic: 
-                dic[i] = 1
-            else: 
-                dic[i] += 1 
+            dic[i] += 1
         for i in dic.values(): 
             if i>=2: 
                 return True
         return False
+    
+        # sol 2:
+        # runtime: 45ms
+        if nums == []:
+            return False
+        s = set(nums)
+        return len(s) != len(nums)
         
