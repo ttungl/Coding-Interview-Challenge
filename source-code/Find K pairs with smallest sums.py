@@ -1,4 +1,5 @@
 # Find K pairs with smallest sums
+# ttungl@gmail.com
 def kSmallestPairs(self, nums1, nums2, k):
 	# sol:
 	queue = []

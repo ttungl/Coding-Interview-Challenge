@@ -1,5 +1,5 @@
 # 249. Group Shifted Strings
-
+# ttungl@gmail.com
 # https://leetcode.com/problems/group-shifted-strings/description/
 
 class Solution(object):

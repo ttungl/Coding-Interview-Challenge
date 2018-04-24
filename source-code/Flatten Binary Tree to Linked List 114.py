@@ -1,5 +1,5 @@
 # 114. Flatten Binary Tree to Linked List
-
+# ttungl@gmail.com
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):

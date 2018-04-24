@@ -1,5 +1,5 @@
 # 771. Jewels and Stones
-
+# ttungl@gmail.com
 class Solution(object):
     def numJewelsInStones(self, J, S):
         """

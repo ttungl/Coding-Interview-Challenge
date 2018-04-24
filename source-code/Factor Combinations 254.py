@@ -1,5 +1,5 @@
 # Factor Combinations 254
-
+# ttungl@gmail.com
 class Solution(object):
     def getFactors(self, n):
         """

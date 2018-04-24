@@ -1,5 +1,5 @@
 # 775. Global and Local Inversions
-
+# ttungl@gmail.com
 
 # We have some permutation A of [0, 1, ..., N - 1], where N is the length of A.
 

@@ -1,6 +1,6 @@
 # 374. Guess Number Higher or Lower
 
-
+# ttungl@gmail.com
 # The guess API is already defined for you.
 # @param num, your guess
 # @return -1 if my number is lower, 1 if my number is higher, otherwise return 0

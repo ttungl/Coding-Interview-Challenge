@@ -1,6 +1,6 @@
 # Implement a trie data structure v2
 # src: https://youtu.be/BXeIu54mUg0
-
+# ttungl@gmail.com
 
 # Four methods in this implementation
 # 1. insert_key(key, val, trie)

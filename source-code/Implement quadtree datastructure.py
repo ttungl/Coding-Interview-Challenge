@@ -1,4 +1,5 @@
 # Implement quadtree datastructure
+# ttungl@gmail.com
 # source: https://github.com/mdrasmus/compbio/blob/master/rasmus/quadtree.py
 """
     QuadTree data structure

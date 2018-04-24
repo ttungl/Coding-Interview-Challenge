@@ -1,5 +1,5 @@
 # 128. Longest Consecutive Sequence
-
+# ttungl@gmail.com
 # Given an unsorted array of integers, find the length of the longest consecutive
 # elements sequence.
 

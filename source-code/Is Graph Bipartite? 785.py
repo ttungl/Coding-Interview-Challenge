@@ -1,5 +1,5 @@
 # 785. Is Graph Bipartite?
-
+# ttungl@gmail.com
 
 # Given a graph, return true if and only if it is bipartite.
 

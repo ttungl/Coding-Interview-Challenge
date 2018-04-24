@@ -1,5 +1,5 @@
 # Generate Parentheses 22
-
+# ttungl@gmail.com
 class Solution(object):
     def generateParenthesis(self, n):
         """

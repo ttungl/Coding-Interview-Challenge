@@ -1,5 +1,5 @@
 # 232. Implement Queue using Stacks
-
+# ttungl@gmail.com
 class MyQueue(object):
     # The idea is to simulate a queue using two stacks (same as previous posts). 
     # Use python list as the underlying data structure for stack and add a "move()" method to simplify code: 

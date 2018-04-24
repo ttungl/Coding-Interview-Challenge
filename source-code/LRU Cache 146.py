@@ -1,5 +1,5 @@
 # 146. LRU Cache
-
+# ttungl@gmail.com
 class LRUCache(object):
 
     # sol 1: use collections.OrderedDict()
