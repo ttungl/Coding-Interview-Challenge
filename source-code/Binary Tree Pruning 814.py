@@ -18,7 +18,8 @@
 # Example 2:
 # Input: [1,0,1,0,0,0,1]
 # Output: [1,null,1,null,1]
-
+# Binary Tree Pruning 814
+# ttungl@gmail.com
 
 
 # Example 3:

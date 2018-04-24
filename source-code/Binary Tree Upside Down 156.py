@@ -1,5 +1,5 @@
 # 156. Binary Tree Upside Down
-
+# ttungl@gmail.com
 # Given a binary tree where all the right nodes are either leaf nodes with a sibling (a left node that shares the same parent node) or empty, flip it upside down and turn it into a tree where the original right nodes turned into left leaf nodes. Return the new root.
 
 # For example:
@@ -39,11 +39,8 @@ class Solution(object):
             return root
         
         newRoot = self.upsideDownBinaryTree(root.left)
-        
         root.left.right, root.left.left = root, root.right
-        
         root.left, root.right = None, None
-        
         return newRoot
         
         
@@ -54,17 +51,12 @@ class Solution(object):
             return root
         
         rLeft, rRight = root.left, root.right
-        
         root.left, root.right = None, None
         
         while rLeft: # update left and right children, form new root.
-        
             newLeft, newRight = rLeft.left, rLeft.right
-            
             rLeft.left, rLeft.right = rRight, root
-
             root = rLeft
-            
             rLeft, rRight = newLeft, newRight
         
         return root

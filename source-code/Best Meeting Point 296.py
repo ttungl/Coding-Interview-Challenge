@@ -1,5 +1,5 @@
 # 296. Best Meeting Point
-
+# ttungl@gmail.com
 
 # A group of two or more people wants to meet and minimize the total travel distance. You are given a 2D grid of values 0 or 1, where each 1 marks the home of someone in the group. The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.
 
@@ -10,19 +10,23 @@
 # 0 - 0 - 0 - 0 - 0
 # |   |   |   |   |
 # 0 - 0 - 1 - 0 - 0
+
 # The point (0,2) is an ideal meeting point, as the total travel distance of 2+2+2=6 is minimal. So return 6.
 
 
 class Solution(object):
     # sol 1:
+    # find a set of groups (coordinates), sort ends,
+    # use two pointers to update manhattan's distance
+    # with two lists I and J.
     # time O(m*n) space O(n)
     # runtime: 46ms
     def totalMin(groups):
         ans, i, j = 0, 0, len(groups)-1
         I, J = sorted([k[0] for k in groups]), sorted([k[1] for k in groups])
         while i < j:
-            ans += I[j] - I[i]
-            ans += J[j] - J[i]
+            ans += I[j] - I[i] # p2.x - p1.x
+            ans += J[j] - J[i] # p2.y - p1.y
             i += 1
             j -= 1
         return ans
@@ -32,21 +36,16 @@ class Solution(object):
 
     # sol 2:
     # runtime: 46ms
-    def totalMin(self, A):
+    def totalMin(A):
         ans, i, j = 0, 0, len(A)-1
-        A.sort()
         while i < j:
             ans += A[j] - A[i]
             i += 1
             j -= 1
         return ans
     n, m = len(grid), len(grid[0])
-    I, J = [], []
-    for i in range(n):
-        for j in range(m):
-            if grid[i][j]!=0:
-                I.append(i)
-                J.append(j)
+    groups = [(i,j) for i in range(n) for j in range(m) if grid[i][j]!=0]
+    I, J = sorted([x[0] for x in groups]), sorted([x[1] for x in groups])
     return totalMin(I) + totalMin(J)
 
     # sol 3:

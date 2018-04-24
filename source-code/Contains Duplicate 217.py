@@ -1,5 +1,5 @@
 # 217. Contains Duplicate
-
+# ttungl@gmail.com
 class Solution(object):
     def containsDuplicate(self, nums):
         """

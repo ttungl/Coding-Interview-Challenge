@@ -1,4 +1,5 @@
 # 735. Asteroid Collision
+# ttungl@gmail.com
 
 # compute array after collision.
 

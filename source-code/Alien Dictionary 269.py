@@ -1,4 +1,5 @@
 # 269. Alien Dictionary 
+# ttungl@gmail.com
 
 # Referenne:
 # https://discuss.leetcode.com/topic/22476/16-18-lines-python-30-lines-c

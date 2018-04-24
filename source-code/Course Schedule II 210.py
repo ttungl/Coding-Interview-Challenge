@@ -1,5 +1,5 @@
 # 210. Course Schedule II
-
+# ttungl@gmail.com
 # There are a total of n courses you have to take, labeled from 0 to n - 1.
 
 # Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
@@ -52,17 +52,15 @@ class Solution(object):
             if visit[i] == 0:
                 queue.append(i)
         # find whether it's possible to take all courses.
-        k = 0
         res = []
         while queue:
             node = queue.popleft()
             res.append(node)
-            k += 1
             for i in graph[node]:
                 visit[i] -= 1
                 if visit[i] == 0:
                     queue.append(i)
-        return res if k==numCourses else []
+        return res if len(res)==numCourses else []
     
         # sol 2:
         # DFS recursive

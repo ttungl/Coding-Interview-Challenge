@@ -1,5 +1,5 @@
 # 822. Card Flipping Game
-
+# ttungl@gmail.com
 # On a table are N cards, with a positive integer printed on the front and back of each card (possibly different).
 
 # We flip any number of cards, and after we choose one card. 
@@ -38,7 +38,7 @@ class Solution(object):
         # sol 1:
         # get the same numbers, then 
         # runtime: 50ms
-        same = set([i for i, j in zip(fronts, backs) if i==j])
+        same = set([i for i, j in zip(fronts, backs) if i==j]) # same numbers list
         return min([i for i in fronts + backs if i not in same] or [0])
         
         

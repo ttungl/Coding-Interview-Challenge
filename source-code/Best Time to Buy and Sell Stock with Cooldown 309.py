@@ -1,4 +1,5 @@
 # 309. Best Time to Buy and Sell Stock with Cooldown
+# ttungl@gmail.com
 
 # [buy-sell-cooldown] with max profit
 

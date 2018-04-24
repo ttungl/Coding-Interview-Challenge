@@ -1,5 +1,5 @@
 # 791. Custom Sort String
-
+# ttungl@gmail.com
 
 # S and T are strings composed of lowercase letters. In S, no letter occurs more than once.
 
@@ -35,7 +35,7 @@ class Solution(object):
         :rtype: str
         """
         # sol 1
-        # time O(n^m) space O(n)
+        # time O(n*m) space O(n)
         # runtime: 60ms
         P, S, T = [], [s for s in S], [t for t in T]
         dic = dict([i, T.count(i)] for i in T)
