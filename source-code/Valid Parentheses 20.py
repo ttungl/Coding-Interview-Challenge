@@ -1,5 +1,5 @@
 # 20. Valid Parentheses
-
+# ttungl@gmail.com
 class Solution(object):
     def isValid(self, s):
         """
@@ -13,5 +13,6 @@ class Solution(object):
             if i == '{': stack.append('}') 
             elif i=='(': stack.append(')')
             elif i=='[': stack.append(']')
-            elif not stack or i != stack.pop(): return False
+            elif not stack or i != stack.pop(): 
+                return False
         return not stack

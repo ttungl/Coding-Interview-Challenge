@@ -1,5 +1,5 @@
 # 766. Toeplitz Matrix
-
+# ttungl@gmail.com
 # A matrix is Toeplitz if every diagonal 
 # from top-left to bottom-right has the same element.
 

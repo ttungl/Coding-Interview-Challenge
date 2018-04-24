@@ -1,5 +1,5 @@
 # 87. Scramble String
-
+# ttungl@gmail.com
 # We say that "rgtae" is a scrambled string of "great".
 # Given two strings s1 and s2 of the same length, 
 # determine if s2 is a scrambled string of s1.

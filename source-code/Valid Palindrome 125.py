@@ -1,5 +1,5 @@
 # 125. Valid Palindrome
-
+# ttungl@gmail.com
 class Solution(object):
     def isPalindrome(self, s):
         """

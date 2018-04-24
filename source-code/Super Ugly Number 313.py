@@ -1,5 +1,5 @@
 # 313. Super Ugly Number
-
+# ttungl@gmail.com
 
 class Solution(object):
     def nthSuperUglyNumber(self, n, primes):

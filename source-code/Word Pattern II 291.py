@@ -1,5 +1,5 @@
 # Word Pattern II 291
-
+# ttungl@gmail.com
 class Solution(object):
     def wordPatternMatch(self, pattern, str):
         """

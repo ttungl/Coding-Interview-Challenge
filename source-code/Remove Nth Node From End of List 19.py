@@ -1,5 +1,5 @@
 # 19. Remove Nth Node From End of List
-
+# ttungl@gmail.com
 # Given a linked list, remove the nth node from the end of list and return its head.
 
 # For example,
@@ -31,10 +31,13 @@ class Solution(object):
         pi = pj = head
         for _ in range(n): # distance n btw i and j
             pj = pj.next
+
         if not pj: # check None
             return head.next
+
         while pj.next: # traverse to the end of list
             pi, pj = pi.next, pj.next
+            
         pi.next = pi.next.next # remove n-th
         return head
     

@@ -1,5 +1,5 @@
 # 818. Race Car
-
+# ttungl@gmail.com
 # Your car starts at position 0 and speed +1 on an infinite number line.  (Your car can go into negative positions.)
 
 # Your car drives automatically according to a sequence of instructions A (accelerate) and R (reverse).
@@ -44,7 +44,7 @@ class Solution(object):
         # runtime: 2973ms
         if target == 0:
             return 0
-            
+
         queue = [(0, 1)] # (p,s)
         visited, cnt = set((0, 1)), 0
 
@@ -56,7 +56,8 @@ class Solution(object):
                 p1, s1 = pos + speed, speed * 2
                 newQueue.append((p1,s1))
 
-                if p1 == target: return cnt
+                if p1 == target: 
+                	return cnt
                 
                 p2, s2 = pos, -1 if s1 > 0 else 1
                 if (p2,s2) not in visited:

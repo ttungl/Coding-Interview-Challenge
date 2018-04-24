@@ -1,5 +1,5 @@
 # 242. Valid Anagram
-
+# ttungl@gmail.com
 class Solution(object):
     def isAnagram(self, s, t):
         """

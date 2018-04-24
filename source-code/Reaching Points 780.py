@@ -1,5 +1,5 @@
 # 780. Reaching Points
-
+# ttungl@gmail.com
 # A move consists of taking a point (x, y) and transforming it to either
 # (x, x+y) or (x+y, y).
 
@@ -56,15 +56,17 @@ class Solution(object):
             if tx < ty:
                 ty -= (max(((ty-sy)//tx), 1))*tx
             else:
-                tx -= (max(((tx-sx)//ty),1))*ty
+                tx -= (max(((tx-sx)//ty), 1))*ty
         return (sx==tx and sy==ty)
                 
         # sol 3
         # reduce tx,ty if they're greater than starting points.
         # check (x, y+kx) or (x+ky, y)
+        # time O(n) space O(1)
         # runtime: 34ms
         while sx < tx and sy < ty:
             tx, ty = tx%ty, ty%tx
+            
         return (sx==tx and (ty-sy)%sx==0) or (sy==ty and (tx-sx)%sy==0)
     
     

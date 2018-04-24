@@ -1,5 +1,5 @@
 # 800. Similar RGB Color
-
+# ttungl@gmail.com
 # In the following, every capital letter represents some hexadecimal digit from 0 to f.
 
 # The red-green-blue color "#AABBCC" can be written as "#ABC" in shorthand.  For example, "#15c" is shorthand for the color "#1155cc".

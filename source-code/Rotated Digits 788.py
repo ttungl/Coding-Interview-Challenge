@@ -1,6 +1,6 @@
 # 788. Rotated Digits
 
-
+# ttungl@gmail.com
 # X is a good number if after rotating each digit individually by 180 degrees, 
 # we get a valid number that is different from X. A number is valid if each digit r
 # emains a digit after rotation. 0, 1, and 8 rotate to themselves; 2 and 5 rotate to 
@@ -39,8 +39,8 @@ class Solution(object):
         
         # sol 2:
         # runtime: 280ms
-        res, s1, s2 = 0, [3,4,7], [2,5,6,9]
-        for i in range(1, N+1):
+        res, s1, s2 = 0, [3, 4, 7], [2, 5, 6, 9]
+        for i in range(1, N + 1):
             if any(True if str(k) in str(i) else False for k in s1): continue
             if any(True if str(h) in str(i) else False for h in s2): res+=1   
         return res

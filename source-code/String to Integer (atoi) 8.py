@@ -1,5 +1,5 @@
 # String to Integer (atoi) 8
-
+# ttungl@gmail.com
 class Solution(object):
     def myAtoi(self, str):
         """

@@ -1,5 +1,5 @@
 # 126. Word Ladder II
-
+# ttungl@gmail.com
 # Given two words (beginWord and endWord), and a dictionary's word list, 
 # find all shortest transformation sequence(s) from beginWord to endWord, such that:
 # Only one letter can be changed at a time
@@ -31,20 +31,25 @@ class Solution(object):
         # time
         # runtime
         def recurse(wordList, cur, d = collections.defaultdict(list)):
-            if not cur: return cur
-            if endWord in cur: return [[endWord]]
+            if not cur: 
+                return cur
+
+            if endWord in cur: 
+                return [[endWord]]
+            
             wordList -= cur # 
             nextCur = set() # set has smaller size than list.
-            for W in cur:
-                for l in string.ascii_lowercase: # 'a..z'
+            
+            for w in cur:
+                for c in string.ascii_lowercase: # 'a..z'
                     for i in range(len(beginWord)): # check for each char in beginWord
-                        word = W[:i] + l + W[i + 1:] # only one char changes in word W
+                        word = w[:i] + c + w[i + 1:] # only one char changes in word W
                         if word in wordList: # if this change is in wordList, add to dict and nextCur
-                            d[word].append(W)
+                            d[word].append(w)
                             nextCur.add(word)
             return [[y] + x for x in recurse(wordList, nextCur, d) for y in d[x[0]]] # recursive for nextCur.
+            
         return recurse(set(wordList), set([beginWord]))
-        
         
         
         # sol 2: Breadth-First Search
@@ -57,9 +62,10 @@ class Solution(object):
         while left and right:
             if left & right:
                 paths = [[beginWord]]
-                for _ in xrange(pathLen - 1):
+                for _ in range(pathLen - 1):
                     paths = [path + [x] for path in paths for x in D[path[-1]]]
                 return [path for path in paths if path[-1] == endWord]
+
             cur = min(left, right, key=len)
             wordList -= cur
             nextCur = set()

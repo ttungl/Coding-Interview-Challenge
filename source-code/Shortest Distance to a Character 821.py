@@ -1,5 +1,5 @@
 # 821. Shortest Distance to a Character
-
+# ttungl@gmail.com
 # Given a string S and a character C, return an array of integers representing the shortest distance from the character C in the string.
 
 # Example 1:
@@ -24,13 +24,13 @@ class Solution(object):
         """
         # sol 1:
         # runtime: 955ms
-        return [min(abs(i - li) for li in [j for j,v in enumerate(S) if v==C]) for i in range(len(S))]
+        return [min(abs(i - li) for li in [j for j, v in enumerate(S) if v==C]) for i in range(len(S))]
+    
     
         # sol 2:
         # runtime:
-        lst = [i for i,v in enumerate(S) if v==C]
+        lst = [i for i,v in enumerate(S) if v==C] # matched character list
         return [min(abs(i - j) for j in lst) for i in range(len(S))]
-                
             
 
         # sol 2:

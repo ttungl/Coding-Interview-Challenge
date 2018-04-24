@@ -1,5 +1,5 @@
 # 151. Reverse Words in a String
-
+# ttungl@gmail.com
 class Solution(object):
     def reverseWords(self, s):
         """
@@ -20,8 +20,10 @@ class Solution(object):
         s = s[::-1]
         res = ""
         for i, each in enumerate(s.split()):
-            if i!=0: res += " " + each[::-1] 
-            else: res += each[::-1]
+            if i!=0: 
+            	res += " " + each[::-1] 
+            else: 
+            	res += each[::-1]
         return res
         
         
