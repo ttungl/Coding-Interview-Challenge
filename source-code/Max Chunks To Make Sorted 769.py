@@ -1,5 +1,5 @@
 # 769. Max Chunks To Make Sorted
-
+# ttungl@gmail.com
 # Given an array arr that is a permutation of [0, 1, ..., arr.length - 1], 
 # we split the array into some number of "chunks" (partitions), 
 # and individually sort each chunk.  After concatenating them, 

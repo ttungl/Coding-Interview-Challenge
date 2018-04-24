@@ -1,5 +1,5 @@
 # 56. Merge Intervals 
-
+# ttungl@gmail.com
 
 # Given a collection of intervals, merge all overlapping intervals.
 

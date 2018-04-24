@@ -1,5 +1,5 @@
 # 695. Max Area of Island
-
+# ttungl@gmail.com
 class Solution(object):
     def maxAreaOfIsland(self, grid):
         """

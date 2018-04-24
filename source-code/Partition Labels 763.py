@@ -1,5 +1,5 @@
 # 763. Partition Labels
-
+# ttungl@gmail.com
 # Input: S = "ababcbacadefegdehijhklij"
 # Output: [9,7,8]
 # Explanation:
@@ -15,7 +15,31 @@ class Solution(object):
         :type S: str
         :rtype: List[int]
         """
-        # sol 1: dictionary
+        # sol 1:
+		# + Find the right most index of each character to form the ranges.
+		# + Merging those overlapping intervals.
+        # time O(n*m) space O(n)
+        # runtime: 135ms
+        uniqueChars, ranges, res = [], [], []
+        def right_most(S, c):
+            for i in range(len(S))[::-1]:
+                if S[i] == c:
+                    return i
+            return -1
+        for i in range(len(S)):
+            if S[i] not in uniqueChars:
+                uniqueChars.append(S[i])
+                index = right_most(S, S[i])
+                ranges.append([i, index])
+        for i in sorted(ranges, key=lambda x: x[0]): # start sorted.
+            if res and res[-1][1] >= i[0]: # res.e >= i.s
+                res[-1][1] = max(res[-1][1], i[1]) # merge
+            else:
+                res.append(i) # i = [x, y]
+        return [i[1]-i[0]+1 for i in res]
+
+
+        # sol 2: dictionary
         # time: O(n) space O(n)
         # runtime: 69ms
         if not S: return []
@@ -42,7 +66,9 @@ class Solution(object):
                 end = max(e, end) 
         res.append(end - start + 1) # last 
         return res
-            
+        
+
+
         
        
         

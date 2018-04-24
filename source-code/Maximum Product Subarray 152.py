@@ -1,5 +1,5 @@
 # 152. Maximum Product Subarray
-
+# ttungl@gmail.com
 
 # Find the contiguous subarray within an array (containing at least one number) which has the largest product.
 

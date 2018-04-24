@@ -1,5 +1,5 @@
 # 726. Number of Atoms
-
+# ttungl@gmail.com
 # Given a chemical formula (given as a string), return the count of each atom.
 
 # An atomic element always starts with an uppercase character, then zero or more lowercase letters, representing the name.

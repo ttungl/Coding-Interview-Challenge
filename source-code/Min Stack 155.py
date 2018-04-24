@@ -1,5 +1,5 @@
 # 155. Min Stack
-
+# ttungl@gmail.com
 class MinStack(object):
 	# using list array
     # runtime: 72 ms
@@ -37,7 +37,8 @@ class MinStack(object):
         
     def push(self, x):
         self.stack.append(x)
-        if not self.minlist: self.minlist.append(x)
+        if not self.minlist: 
+            self.minlist.append(x)
         else: 
             self.minlist.append(min(x, self.minlist[-1]))
 
@@ -51,6 +52,10 @@ class MinStack(object):
 
     def getMin(self):
         return self.minlist[-1]
+
+
+    
+
 
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()

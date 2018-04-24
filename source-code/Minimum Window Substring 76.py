@@ -1,5 +1,5 @@
 # Minimum Window Substring 76
-
+# ttungl@gmail.com
 class Solution(object):
     def minWindow(self, s, t):
         """
@@ -7,7 +7,42 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        # solution
+        # sol 1:
+        # runtime: 815ms
+        # two pointers to keep track of min window substring.
+        # if all chars in substring contain in T, then:
+        #   update minwindow with (right - left) distance
+        #   if char on left in dict, count+1 it in dict.
+        #   increase left pointer,
+        # else: # not all chars of substr in T:
+        #   break if right pointer meets len(s)
+        #   decrease char on right in dict if it exists.
+        #   increase right pointer.
+        left, right = 0, 0
+        counter = collections.Counter(t) # count T chars
+        minwindow = len(s) + 1
+        answer = ''
+        while right <= len(s):
+            # check all chars in T are in the current answer
+            if all([True if x <=0 else False for x in counter.values()]):
+                if minwindow > right-left:
+                    minwindow = right-left
+                    answer = s[left:right]
+                if s[left] in counter:
+                    counter[s[left]] += 1
+                left += 1
+            else:
+                if right == len(s):
+                    break
+                if s[right] in counter:
+                    counter[s[right]] -= 1
+                right += 1
+        return answer
+
+
+
+
+        # sol 2
         # s[i:j] : current Window
         # s[L:R] : result Window
         # in forloop, add new char to window, if nothing's missing,
@@ -27,12 +62,13 @@ class Solution(object):
         return s[L:R]
     	
     	#########################################
-        # sol 2:
+        # sol 3:
         # time: O(n^2); space: O(n)
         # runtime: 132ms
         if not t: return ""
         map = [0 for _ in range(128)] # 8-bit chars.
-        for i in t: map[ord(i)]+=1 # init the map
+        for i in t: 
+            map[ord(i)]+=1 # init the map
         begin = end = min_d = 0
         d = len(s)+2 # int_max
         count = len(t)
@@ -52,6 +88,9 @@ class Solution(object):
                 begin +=1
         if d > len(s): return ""
         return s[min_d:(min_d+d)]
+
+
+
         
         
         

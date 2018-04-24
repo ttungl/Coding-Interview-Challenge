@@ -1,5 +1,5 @@
 # 326. Power of Three
-
+# ttungl@gmail.com
 
 
 # Given an integer, write a function to determine if it is a power of three.

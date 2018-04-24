@@ -1,5 +1,5 @@
 # 716. Max Stack
-
+# ttungl@gmail.com
 
 class MaxStack(object):
 

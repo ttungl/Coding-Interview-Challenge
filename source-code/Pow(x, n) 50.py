@@ -1,5 +1,5 @@
 # 50. Pow(x, n)
-
+# ttungl@gmail.com
 # E.g. 	Pow(2.000,10) = 1024
 # 	 	Pow(2.100, 3) = 9.261
 

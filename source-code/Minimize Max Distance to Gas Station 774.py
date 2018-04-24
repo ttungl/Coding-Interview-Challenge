@@ -1,5 +1,5 @@
 # 774. Minimize Max Distance to Gas Station
-
+# ttungl@gmail.com
 # On a horizontal number line, we have gas stations at positions stations[0], stations[1], ..., stations[N-1], where N = stations.length.
 
 # Now, we add K more gas stations so that D, the maximum distance between adjacent gas stations, is minimized.
@@ -50,9 +50,10 @@ class Solution(object):
 
         # sol 2: 
         # priority queue
+        # time O(n log n) space O(n)
         # runtime: 315ms
         s = stations
-        d, heap = (s[-1]-s[0])/float(K), []
+        d, heap = (s[-1]-s[0])/float(K), [] # minmax distance is no more than (station(n-1)-station(0)) / K
         for v1, v2 in zip(s, s[1:]):
             x = max(1, int((v2-v1)/d)) 
             K-= x-1
