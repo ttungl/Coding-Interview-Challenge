@@ -23,10 +23,13 @@ class Solution(object):
         # runtime:
         if len(points) <= 2: 
             return len(points)
+        
         res, d = 0, collections.defaultdict(int)
+
         def findGCD(x, y):
             if y==0: return x
             return findGCD(y, x % y)
+
         for i in range(len(points)):
             d.clear()
             curmax = overlap = 0

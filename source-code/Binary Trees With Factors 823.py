@@ -35,11 +35,14 @@ class Solution(object):
         # runtime: 636ms
         A.sort()
         dp = collections.defaultdict(int)
+
         for i,v in enumerate(A):
             dp[v] = 1
+        
             for u in A[:i]:
                 if v % u == 0 and v/u in dp: # find all factors.
                     dp[v] += dp[u] * dp[v/u]
+        
         return sum(dp.values())%(10**9 + 7)
         
         
