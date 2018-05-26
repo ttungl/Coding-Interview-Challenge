@@ -13,6 +13,9 @@ class Solution(object):
         :rtype: bool
         """
         # sol 1:
+        # key: use dict store {v:i}.
+        # check if it meets, v in d and i-d[v]<=k.
+        # time O(n)
         # runtime: 45ms
         if k < 0: 
         	return False

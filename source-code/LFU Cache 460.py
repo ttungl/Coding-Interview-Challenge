@@ -44,7 +44,8 @@ class LFUCache(object):
         return self.nodeForKey[key][0]
         
     def put(self, key, value):
-        if key in self.nodeForKey: self._update(key, value)
+        if key in self.nodeForKey: 
+            self._update(key, value)
         else:
             # update key to cache and frequency tracker.
             self.nodeForKey[key] = (value,1) # (val, freq)

@@ -21,7 +21,7 @@ class Solution(object):
         # binary search
         # runtime: 1476ms
         res = []
-        nums.sort()
+        nums.sort() ## tricky
 
         for i in range(len(nums)-2):
             if i > 0 and nums[i] == nums[i-1]:

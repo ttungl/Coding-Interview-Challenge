@@ -28,7 +28,9 @@ class Solution(object):
             return 0
         res = last_elem = 0
         rows, cols = len(matrix), len(matrix[0])
+        
         dp = [0]*(cols+1)
+
         for i in range(1, rows+1):
             for j in range(1, cols+1):
                 tem = dp[j] # maintain last element

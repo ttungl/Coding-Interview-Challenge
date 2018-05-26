@@ -30,6 +30,7 @@ class Solution(object):
         :rtype: int
         """
         # optimized solution
+        # key: update max res and diff of current and previous update(cur)
         # time O(n); space: O(1)
         # runtime: 32 ms
         if not prices: 

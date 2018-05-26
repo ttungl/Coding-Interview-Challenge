@@ -45,6 +45,12 @@ class Solution(object):
         return res
     
         # sol 2:
+        # key: use left and right list for non-overlap pairs.
+        # for every pair in the list
+        # if input start > current end: add to left,
+        # if current start > input end: add to right,
+        # else, merging and update: input start, end = min(starts), max(ends)
+        # return left +[s,e]+right
         # runtime: 69ms
         s, e = newInterval.start, newInterval.end
         left, right = [], []
@@ -53,7 +59,7 @@ class Solution(object):
                 left += i,
             elif i.start > e:
                 right += i,
-            else:
+            else: # merge
                 s, e = min(s, i.start), max(e, i.end)
         return left + [Interval(s, e)] + right
         

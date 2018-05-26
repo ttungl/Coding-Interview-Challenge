@@ -25,12 +25,13 @@ class LRUCache(object):
         if key in self.dic:
             self.dic.pop(key)
         else: # insert value 
-            if self.remain > 0: self.remain -= 1
+            if self.remain > 0: 
+                self.remain -= 1
             else: # when cache (self.dic) is full
                 # popitem() returns and removes a (key, value) pair.
                 # The pairs are returned in LIFO order if last is true or FIFO order if false.
                 self.dic.popitem(last=False) # FIFO
-        self.dic[key] = value
+        self.dic[key] = value # update key as newest one.
             
     # sol 2: use dictionary and deque().
     # runtime: 879ms

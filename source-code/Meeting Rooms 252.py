@@ -30,7 +30,7 @@ class Solution(object):
         intervals.sort(key=lambda x: x.start)
         for i in intervals:
             if res and res[-1].end > i.start:
-                res[-1].end = max(res[-1].end, i.end)
+                res[-1].end = max(res[-1].end, i.end) # can return False here!
             else:
                 res += i,
         return len(res) == len(intervals)

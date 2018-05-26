@@ -34,6 +34,7 @@ class Solution(object):
         # runtime: 237ms
         i = res = maxp = 0
         jobs = sorted(set((d,p) for d,p in zip(difficulty, profit)))
+        
         for ability in sorted(worker):
             while i < len(jobs) and ability >= jobs[i][0]:
                 maxp = max(maxp, jobs[i][1])
